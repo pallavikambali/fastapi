@@ -112,4 +112,5 @@ def update_post(id: int, updated_post: schemas.PostCreate, db: Session = Depends
     synchronize_session=False
 )
     db.commit()
-    
+    db.refresh(post)
+    return post
