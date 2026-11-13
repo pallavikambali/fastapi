@@ -19,8 +19,7 @@ DATABASE_URL = URL.create(
 # 2. Create database engine
 engine = create_engine(
     DATABASE_URL,
-    pool_pre_ping=True,
-    connect_args={"sslmode": "require"}
+    pool_pre_ping=True
 )
 
 # 3. Create database session

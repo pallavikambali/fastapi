@@ -4,14 +4,11 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from .routers import post,user,auth,vote
 from fastapi import FastAPI   
-from . import models
-from .database import engine
 
 settings = Settings()
 print(settings.database_username)
 
 
-models.Base.metadata.create_all(bind=engine)
 
 origins = ["*"]
 

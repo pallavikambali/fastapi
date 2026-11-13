@@ -4,10 +4,10 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     database_hostname: str = "localhost"
     database_port: str = "5432"
-    database_password: str = "761952"
-    database_username: str = "postgres"
+    database_password: str
+    database_username: str = "fastapi_user"
     database_name: str = "fastapi"
-    secret_key: str = "change-me-in-production"
+    secret_key: str
     algorithm: str = "HS256"
     access_token_expire_minutes: int = 30
 
